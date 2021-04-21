@@ -1,4 +1,12 @@
-# Create GitHub release based on changelog
+# Supported tags and respective Dockerfile links
+
+- [`0.0.1`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+
+# Quick reference (cont.)
+
+- **Where to file issues**: [https://github.com/ets-infra/drone-github-release/issues](https://github.com/ets-infra/drone-github-release/issues)
+
+# What is the purpose of this image?
 
 [Drone](https://www.drone.io) plugin to create a GitHub release based on changelog following [keepachangelog](https://keepachangelog.com/en/1.1.0/) format.
 
@@ -14,3 +22,20 @@ The following steps are executed by this plugin:
 | Parameter | Description |
 |:---|---|
 | changelog_path | Path to the changelog. Default to `CHANGELOG.md` in current folder. |
+
+
+# How to use this image
+
+## Add a step to your drone pipeline
+
+```yaml
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: tag
+  image: etsinfra/drone-github-release:0.0.1
+  settings:
+    changelog_path: custom_folder/CHANGELOG.md
+```

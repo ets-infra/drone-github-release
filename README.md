@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.0.2`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`0.0.3`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -35,7 +35,7 @@ name: default
 
 steps:
 - name: tag
-  image: etsinfra/drone-github-release:0.0.2
+  image: etsinfra/drone-github-release:latest
   settings:
     changelog_path: custom_folder/CHANGELOG.md
 ```

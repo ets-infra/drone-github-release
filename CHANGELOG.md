@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-04-23
+### Added
+- Add `github_token` parameter.
+
+### Removed
+- Remove credentials and response content from logs in case of failure.
+
 ## [0.1.0] - 2021-04-23
 ### Changed
 - Log all available credentials and response content in case of failure.

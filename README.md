@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.1.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`0.2.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -22,7 +22,7 @@ The following steps are executed by this plugin:
 | Parameter | Description |
 |:---|---|
 | changelog_path | Path to the changelog. Default to `CHANGELOG.md` in current folder. |
-
+| github_token | Token used to create the release. Default to the drone GIT password (if available). |
 
 # How to use this image
 
@@ -38,4 +38,5 @@ steps:
   image: etsinfra/drone-github-release:latest
   settings:
     changelog_path: custom_folder/CHANGELOG.md
+    github_token: cc1cc11111111ccc1c11c1cc1ccc1c1cc1111c1c
 ```

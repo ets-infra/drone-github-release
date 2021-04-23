@@ -15,7 +15,7 @@ def create_github_release(release: dict):
     github_branch = os.getenv("DRONE_TARGET_BRANCH")
 
     response = requests.post(
-        url=f"${github_link}api/v3/repos/{github_repository_name}/releases",
+        url=f"{github_link}api/v3/repos/{github_repository_name}/releases",
         headers={'Authorization': f"token {github_token}"},
         json={
             "tag_name": release["version"],

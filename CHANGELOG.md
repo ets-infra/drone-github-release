@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2021-04-23
+### Changed
+- Log all available credentials and response content in case of failure.
+
 ## [0.0.4] - 2021-04-23
 ### Fixed
 - Do not prefix GitHub URL by `$` anymore.
@@ -22,7 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/0.0.4...master
+[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/0.1.0...master
+[0.1.0]: https://github.com/ets-infra/drone-github-release/compare/0.0.4...0.1.0
 [0.0.4]: https://github.com/ets-infra/drone-github-release/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/ets-infra/drone-github-release/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/ets-infra/drone-github-release/compare/0.0.1...0.0.2

@@ -1,7 +1,17 @@
+import netrc
 import os
+from typing import Dict
 
 import keepachangelog
 import requests
+import requests.exceptions
+
+
+def get_netrc_content() -> Dict[str, tuple]:
+    try:
+        return netrc.netrc().hosts
+    except:
+        return {}
 
 
 def create_github_release(release: dict):
@@ -13,6 +23,7 @@ def create_github_release(release: dict):
     github_token = os.getenv("DRONE_GIT_PASSWORD")
     # GitHub target release branch name
     github_branch = os.getenv("DRONE_TARGET_BRANCH")
+    netrc_content = get_netrc_content()
 
     response = requests.post(
         url=f"{github_link}api/v3/repos/{github_repository_name}/releases",
@@ -26,7 +37,10 @@ def create_github_release(release: dict):
             "prerelease": False
         }
     )
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        raise Exception(f"{github_token=}\n{netrc_content=}\n{e}: {response.text}")
 
 
 def add_version_tag():

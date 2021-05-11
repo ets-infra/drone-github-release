@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2021-05-11
+### Added
+- Add `version_file_path` parameter.
+- Add `user_name` parameter.
+- Add `user_email` parameter.
+
+### Changed
+- Commit and push changelog and version files.
+
 ## [0.2.0] - 2021-04-23
 ### Added
 - Add `github_token` parameter.
@@ -33,7 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/0.1.0...master
+[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/0.3.0...master
+[0.3.0]: https://github.com/ets-infra/drone-github-release/compare/0.2.0...0.3.0
+[0.2.0]: https://github.com/ets-infra/drone-github-release/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/ets-infra/drone-github-release/compare/0.0.4...0.1.0
 [0.0.4]: https://github.com/ets-infra/drone-github-release/compare/0.0.3...0.0.4
 [0.0.3]: https://github.com/ets-infra/drone-github-release/compare/0.0.2...0.0.3

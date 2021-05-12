@@ -151,7 +151,7 @@ class GitHub:
         })
         return previous_protection
 
-    def add_release(self, tag: str, branch: str, title: str, content: str):
+    def add_release(self, tag: str, branch: str, title: str, content: str, pre_release: bool):
         self.post(
             "/releases",
             {
@@ -160,7 +160,7 @@ class GitHub:
                 "name": title,
                 "body": content,
                 "draft": False,
-                "prerelease": False
+                "prerelease": pre_release
             }
         )
 
@@ -191,7 +191,8 @@ def create_github_release():
         tag=release["version"],
         branch=os.getenv("DRONE_TARGET_BRANCH"),
         title=f"{release['version']} ({release['release_date']})",
-        content=release["raw"]
+        content=release["raw"],
+        pre_release=os.getenv('PLUGIN_PRE_RELEASE') is not None
     )
 
 

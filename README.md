@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.3.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`0.4.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -27,6 +27,7 @@ The following steps are executed by this plugin:
 | version_file_path | Path to the python file containing the version (if any). |
 | user_name | Name of the GIT commit user. Default to [the drone GIT user name](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-name/). |
 | user_email | email of the GIT commit user. Default to [the drone GIT user email](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-email/). |
+| pre_release | If provided (value does not matter), this will be a GitHub pre-release. |
 
 # How to use this image
 

@@ -166,6 +166,9 @@ class GitHub:
 
 
 def create_github_release():
+    if (only_author := os.getenv('PLUGIN_ONLY_COMMIT_AUTHOR')) and (only_author != os.getenv("DRONE_COMMIT_AUTHOR")):
+        return
+
     files_to_commit = []
 
     changelog_path = os.getenv('PLUGIN_CHANGELOG_PATH', "CHANGELOG.md")

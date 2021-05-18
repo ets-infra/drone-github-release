@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.5.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`0.6.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -17,16 +17,12 @@
 The following steps are executed by this plugin:
 
 1. Gather the latest version number based on changelog.
-2. Commit and push changelog (and version file if provided).
-3. Create a GitHub release for this version and with the content described by the changelog.
+2. Create a GitHub release for this version and with the content described by the changelog.
 
 | Parameter | Description |
 |:---|---|
 | changelog_path | Path to the changelog. Default to `CHANGELOG.md` in current folder. |
-| github_token | Token (repo permission) used to create the release, commit and update repository permissions temporarily. Default to [the drone GIT password](https://docs.drone.io/server/reference/drone-git-password/) (if available). Related user needs to have admin role in repository. |
-| version_file_path | Path to the python file containing the version (if any). |
-| user_name | Name of the GIT commit user. Default to [the drone GIT user name](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-name/). |
-| user_email | email of the GIT commit user. Default to [the drone GIT user email](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-email/). |
+| github_token | Token (repo permission) used to create the release. Default to [the drone GIT password](https://docs.drone.io/server/reference/drone-git-password/) (if available). Related user needs to have admin role in repository. |
 | pre_release | If provided (value does not matter), this will be a GitHub pre-release. |
 | only_commit_author | If provided and the value does not matches the one from [the commit author user name](https://docs.drone.io/pipeline/environment/reference/drone-commit-author/), this plugin will not do anything. |
 
@@ -44,8 +40,5 @@ steps:
   image: etsinfra/drone-github-release:latest
   settings:
     changelog_path: custom_folder/CHANGELOG.md
-    version_file_path: custom_folder/__init__.py
     github_token: cc1cc11111111ccc1c11c1cc1ccc1c1cc1111c1c
-    user_name: user
-    user_email: user@email.com
 ```

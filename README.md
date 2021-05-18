@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.4.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`0.5.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -28,6 +28,7 @@ The following steps are executed by this plugin:
 | user_name | Name of the GIT commit user. Default to [the drone GIT user name](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-name/). |
 | user_email | email of the GIT commit user. Default to [the drone GIT user email](https://docs.drone.io/pipeline/environment/reference/drone-commit-author-email/). |
 | pre_release | If provided (value does not matter), this will be a GitHub pre-release. |
+| only_commit_author | If provided and the value does not matches the one from [the commit author user name](https://docs.drone.io/pipeline/environment/reference/drone-commit-author/), this plugin will not do anything. |
 
 # How to use this image
 

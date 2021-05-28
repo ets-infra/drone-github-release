@@ -1,6 +1,6 @@
 # Supported tags and respective Dockerfile links
 
-- [`0.6.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/0/Dockerfile)
+- [`1.0.0`, `latest`](https://github.com/ets-infra/drone-github-release/blob/master/1/Dockerfile)
 
 # Quick reference (cont.)
 

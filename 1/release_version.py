@@ -1,3 +1,4 @@
+import datetime
 import os
 
 import keepachangelog
@@ -48,12 +49,15 @@ def create_github_release():
 
     github = GitHub()
 
+    pre_release = os.getenv('PLUGIN_PRE_RELEASE') is not None
+    technical_information = f"{'Pre-Release' if pre_release else 'Release'} done on {release['metadata']['release_date']} ({datetime.datetime.utcnow().isoformat()} UTC)"
+
     github.add_release(
-        tag=release["version"],
+        tag=release["metadata"]["version"],
         branch=os.getenv("DRONE_TARGET_BRANCH"),
-        title=f"{release['version']} ({release['release_date']})",
-        content=release["raw"],
-        pre_release=os.getenv('PLUGIN_PRE_RELEASE') is not None
+        title=f"{release['metadata']['version']} ({release['metadata']['release_date']})",
+        content=f"{technical_information}\n{release['raw']}",
+        pre_release=pre_release
     )
 
 

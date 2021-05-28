@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-05-28
+### Changed
+- Add technical information to the release content such as actual release time.
+
 ## [0.6.0] - 2021-05-18
 ### Removed
 - Removed `version_file_path` parameter.
@@ -56,7 +60,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/0.6.0...master
+[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/1.0.0...master
+[1.0.0]: https://github.com/ets-infra/drone-github-release/compare/0.6.0...1.0.0
 [0.6.0]: https://github.com/ets-infra/drone-github-release/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/ets-infra/drone-github-release/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/ets-infra/drone-github-release/compare/0.3.0...0.4.0

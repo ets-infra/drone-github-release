@@ -27,6 +27,7 @@ class GitHub:
         return response
 
     def add_release(self, tag: str, branch: str, title: str, content: str, pre_release: bool):
+        print(f"Creating GitHub {'pre-' if pre_release else ''}release {title} ({tag} tag).")
         self.post(
             "/releases",
             {
@@ -64,7 +65,7 @@ def create_github_release():
 def get_latest_version() -> dict:
     changelog_path = os.getenv('PLUGIN_CHANGELOG_PATH', "CHANGELOG.md")
     releases = keepachangelog.to_raw_dict(changelog_path)
-    new_version = sorted(releases.keys())[-1]
+    new_version, _ = keepachangelog.to_sorted_semantic(releases.keys())[-1]
     return releases[new_version]
 
 

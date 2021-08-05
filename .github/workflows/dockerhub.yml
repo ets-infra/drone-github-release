@@ -28,6 +28,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: /1
+          context: ./1
           push: true
           tags: etsinfra/drone-github-release:latest,etsinfra/drone-github-release:1.0.1

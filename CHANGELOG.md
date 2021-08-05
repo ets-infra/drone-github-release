@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2021-08-04
+### Fixed
+- Releases can now to be performed even if previous versions do not have the same number of digits.
+
+### Added
+- Log the release title and tag that will be created.
+
 ## [1.0.0] - 2021-05-28
 ### Changed
 - Add technical information to the release content such as actual release time.
@@ -60,7 +67,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/1.0.0...master
+[Unreleased]: https://github.com/ets-infra/drone-github-release/compare/1.0.1...master
+[1.0.1]: https://github.com/ets-infra/drone-github-release/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/ets-infra/drone-github-release/compare/0.6.0...1.0.0
 [0.6.0]: https://github.com/ets-infra/drone-github-release/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/ets-infra/drone-github-release/compare/0.4.0...0.5.0
